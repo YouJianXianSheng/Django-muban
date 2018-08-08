@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>班级信息</title>
+	
+</head>
+<body>
+	<h1>班级信息列表</h1>
+		<li>
+			<h1>{{stu.sname}}</h1>
+			<h1>{{stu.getName}}</h1>
+			<!-- {% if stu.sname%}
+				<h1>{{stu.sname}}很帅</h1>
+			{% endif %} -->
+			{% for student in stu %}
+				{{student.sname}}
+				{{ forloop.counter }}
+			{%endfor%}
+
+			{% comment %}
+				张朝帅
+			{% endcomment %}
+
+			{% ifequal 100 100 %}
+				<h1>成功</h1>
+			{%endifequal %}
+		</li>
+</body>
+</html>

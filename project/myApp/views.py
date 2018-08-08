@@ -26,3 +26,9 @@ def gradesStudents(request,num):
 	studentsList = grade.students_set.all()
 
 	return render(request,'myApp/students.html',{'students':studentsList})
+#测试模板变量
+def index(request):
+
+	# stu = Students.objects.get(id=1)
+	stu = Students.objects.all()
+	return render(request,"myApp/index.html",{"stu":stu})

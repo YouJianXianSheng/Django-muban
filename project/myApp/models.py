@@ -27,3 +27,6 @@ class Students(models.Model):
 
     def __str__(self):
         return self.sname
+
+    def getName(self):
+        return self.sname
