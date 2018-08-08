@@ -31,4 +31,16 @@ def index(request):
 
 	# stu = Students.objects.get(id=1)
 	stu = Students.objects.all()
-	return render(request,"myApp/index.html",{"stu":stu})
+	return render(request,"myApp/index.html",{"stu":stu,'str':'abcdefg','list':['python','good']})
+
+#反向解析测试
+def good(request):
+
+	return render(request,"myApp/good.html")
+#测试模板继承
+def main(request):
+
+	return render(request,"myApp/main.html")
+def mains(request):
+
+	return render(request,"myApp/mains.html")

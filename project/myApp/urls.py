@@ -15,4 +15,9 @@ urlpatterns = [
 	url(r'^grades/(\d+)/$',views.gradesStudents),
 	url(r'^index/$', views.index),
 
+	#反向解析测试
+	url(r'^good/$', views.good,name='good'),
+	#测试模板继承
+	url(r'^main/$', views.main,name='main'),
+	url(r'^mains/$', views.mains,name='mains'),
 ]
