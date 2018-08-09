@@ -20,4 +20,12 @@ urlpatterns = [
 	#测试模板继承
 	url(r'^main/$', views.main,name='main'),
 	url(r'^mains/$', views.mains,name='mains'),
+
+	#测试CSRF
+	url(r'^postfile/$', views.postfile,name='postfile'),
+	url(r'^info/$', views.info,name='info'),
+
+	#创建验证码
+	url(r'^verifycode/$', views.verifycode,name='verifycode'),
+
 ]

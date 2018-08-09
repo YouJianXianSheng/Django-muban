@@ -1,0 +1,18 @@
+{% extends 'myApp/base.html' %}
+
+{% block main %}
+	<form action="/info/" method="post">
+		{% csrf_token %}
+
+		姓名：<input type="text" name="username"/>
+		<hr/>
+		密码：<input type='possword' name='possword'/>
+		<hr/>
+		<input type="text" name="verifycode"/>
+		<img src='/verifycode/' />
+		{{str}}
+		<hr/>
+		<input type="submit" value="登录">
+	</form>
+
+{%  endblock main %}
